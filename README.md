@@ -17,5 +17,6 @@ Then read token files referenced in the rules.
 ```
 tokens/       → JSON design tokens (source of truth)
 components.md → Component composition rules
+patterns.md   → Layout patterns by product type
 ai.md         → AI execution rules
 ```

@@ -17,7 +17,7 @@ AI 在所有平台上产出视觉一致的 UI，严格遵循 `mei-ui-system` 的
 所有 UI 代码必须引用 token，不允许硬编码值：
 
 ```
-✅ 正确：--color-primary-500, spacing.4, border-radius.md
+✅ 正确：color.primary.scale.500, spacing.semantic.inset.md, border-radius.scale.md
 ❌ 错误：#任意色值, 随意圆角, 随意间距
 ```
 
@@ -32,7 +32,8 @@ AI 在所有平台上产出视觉一致的 UI，严格遵循 `mei-ui-system` 的
 4. tokens/border-radius.json    → 取圆角
 5. tokens/shadow.json           → 取阴影
 6. tokens/motion.json           → 取动画
-7. components.md                → 通用组件组合规则
+7. patterns.md                  → 先按产品类型定结构和密度
+8. components.md                → 再选具体组件组合规则
 ```
 
 所有 token 文件在 `tokens/` 目录下，相对于项目根路径。
@@ -47,9 +48,9 @@ AI 在所有平台上产出视觉一致的 UI，严格遵循 `mei-ui-system` 的
 ### 5. Dark Mode
 
 - 所有组件必须同时支持 light/dark
-- 背景色用 `bg.*` token
-- 文字色用 `text.*` token
-- 阴影用 `shadow.dark.*`（dark 模式下）
+- 背景色用 `[theme].bg.*` token
+- 文字色用 `[theme].text.*` token
+- 阴影用 `shadow.[theme].*`（shadow.scale 对应 light，shadow.dark 对应 dark）
 
 ### 6. 色调用法
 
@@ -67,7 +68,8 @@ AI 在所有平台上产出视觉一致的 UI，严格遵循 `mei-ui-system` 的
 
 ### 7. 工作流
 
-1. 按第 3 条顺序读取 token 文件
-2. 先按 `components.md` 选择组件语义
-3. 再按 token 生成代码，不要硬编码
-4. 检查生成结果是否符合以上规则
+1. 按第 3 条顺序读取文件和规则
+2. 先按 `patterns.md` 确定产品类型、密度和布局
+3. 再按 `components.md` 选择具体组件
+4. 从 `tokens/` 取精确值生成代码，不要硬编码
+5. 检查生成结果是否符合以上规则
