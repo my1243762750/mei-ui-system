@@ -5,114 +5,157 @@
 ## 全局原则
 
 - 组件只组合 token，不发明颜色、圆角、阴影、间距、字号。
-- 遵循精确的 Token 路径（如 `primary.scale.500`，`light.bg.surface`）。
+- **严格遵循完整 Token 路径**：必须包含文件名前缀且对齐 JSON 物理路径（如 `primary.scale.500`, `typography.size.base`, `border-radius.scale.lg`）。
+- **[theme] 映射规则**：
+  - **对于颜色 (`color.json`)**：`[theme]` 映射为 `light.` 或 `dark.`。
+  - **对于阴影 (`shadow.json`)**：`[theme]` 在浅色模式下映射为 `scale.`，在深色模式下映射为 `dark.`。
+  - **对于其他属性**：若无浅深色区分，则不使用 `[theme]`。
 - 语义色（semantic）只用于表达状态，不替代品牌色或结构色。
-- 同一页面内同等级组件必须使用同一套 token 组合。
 
 ## 颜色轴 (Color Axes) 专有场景
 
-为了避免决策模糊，三套颜色轴有严格的场景划分：
-- **Primary (Indigo-Violet)**: 核心品牌色。用于全局主导航、主操作按钮 (PrimaryButton)、激活态边框。
+- **Primary (Indigo-Violet)**: 核心品牌色。用于全局主导航、主操作按钮 (PrimaryButton)、激活态边框、进度条。
 - **Blue Axis (blueAxis)**: 信息与工具色。专门用于链接 (Links)、次要工具栏 (Toolbar/Secondary Actions)、数据展示 (Charts/Data Tables)。
-- **Purple Axis (purpleAxis)**: 装饰与高级色。专门用于标签 (Tag/Badge)、会员特权/高级功能高亮、插画装饰背景。
+- **Purple Axis (purpleAxis)**: 装饰与高级色。专门用于标签 (Tag/Badge)、会员特权/高级功能高亮、插画装饰背景、Avatar 默认背景。
+
+---
 
 ## Button
 
 ### PrimaryButton
 - background: primary.scale.500
 - text/icon: [theme].text.inverse
-- radius: radius.lg
-- padding: spacing.inset.md + spacing.inline.xl
-- typography: size.base + weight.semibold
-- usage: 页面主操作，每个视图优先只出现一个主按钮组。
+- radius: border-radius.scale.lg
+- padding: spacing.semantic.inset.md + spacing.semantic.inline.xl
+- typography: typography.size.base + typography.fontWeight.semibold
 
 ### SecondaryButton
 - background: [theme].bg.elevated
 - text/icon: primary.scale.500
 - border: [theme].border.default
-- radius: radius.lg
-- padding: spacing.inset.md + spacing.inline.lg
-- usage: 次要操作、辅助命令。
+- radius: border-radius.scale.lg
+- padding: spacing.semantic.inset.md + spacing.semantic.inline.lg
 
 ### TertiaryButton
 - background: transparent
 - text/icon: blueAxis.scale.600
-- border: none
-- radius: radius.md
-- padding: spacing.inset.sm + spacing.inline.md
-- usage: 低权重文本操作，工具条内的图标按钮。
+- radius: border-radius.scale.md
+- padding: spacing.semantic.inset.sm + spacing.semantic.inline.md
 
-## Input
+---
+
+## Form Controls
+
+### Input
 - background: [theme].bg.surface
 - text: [theme].text.primary
-- placeholder: [theme].text.tertiary
 - border: [theme].border.default
 - focus border: primary.scale.500
-- radius: radius.lg
-- padding: spacing.inset.md + spacing.inline.lg
-- typography: size.base + weight.regular
+- radius: border-radius.scale.lg
+- padding: spacing.semantic.inset.md + spacing.semantic.inline.lg
 
-## Card
+### Switch / Checkbox / Radio
+- active background: primary.scale.500
+- inactive background: [theme].bg.elevated
+- checkmark/dot: [theme].text.inverse
+- border (inactive): [theme].border.strong
+- radius (Checkbox): border-radius.scale.sm
+- radius (Switch/Radio): border-radius.scale.full
+
+### Select / Dropdown
 - background: [theme].bg.elevated
 - border: [theme].border.default
-- radius: radius.lg
-- shadow: shadow.sm
-- padding: spacing.inset.lg
-- title: size.base + weight.semibold + [theme].text.primary
-- body: size.sm/base + weight.regular + [theme].text.secondary
+- radius: border-radius.scale.lg
+- shadow: shadow.[theme].md
+- typography: typography.size.base
 
-## StatusMessage
-- success icon/text: semantic.success.base
-- warning icon/text: semantic.warning.base
-- error icon/text: semantic.error.base
-- info icon/text: semantic.info.base
-- background: semantic.[status].light (仅用于小面积提示条)
-- container border: [theme].border.default (大面积容器禁止用 semantic)
+---
 
-## Badge / Tag
+## Navigation & Feedback
+
+### NavBar
+- background: primary.scale.500
+- text/icon: [theme].text.inverse
+- radius: border-radius.scale.xl
+- padding: spacing.semantic.inset.lg 到 spacing.semantic.inset.xl
+- typography: typography.size.2xl/3xl
+
+### Tabs / SegmentedControl
+- background: [theme].bg.surface
+- active indicator: primary.scale.500 或 [theme].bg.elevated
+- text (active): primary.scale.600
+- text (inactive): [theme].text.secondary
+- radius: border-radius.scale.lg
+
+### Toast / Snackbar
+- background: [theme].text.primary (反转色)
+- text: [theme].text.inverse
+- radius: border-radius.scale.md
+- shadow: shadow.[theme].lg
+- padding: spacing.semantic.inset.md + spacing.semantic.inline.lg
+
+### Loading / Spinner / Skeleton
+- spinner color: primary.scale.500
+- skeleton background: [theme].bg.surface
+- skeleton shimmer: [theme].bg.elevated
+- animation: motion.duration.normal + motion.easing.easeInOut
+
+---
+
+## Data Display
+
+### Card
+- background: [theme].bg.elevated
+- border: [theme].border.default
+- radius: border-radius.scale.lg
+- shadow: shadow.[theme].sm
+- padding: spacing.semantic.inset.lg
+
+### Avatar
+- background: purpleAxis.scale.100
+- text: purpleAxis.scale.700
+- border: [theme].bg.page (作为描边)
+- radius: border-radius.scale.full
+
+### Badge / Tag
 - background: purpleAxis.scale.50
 - text: purpleAxis.scale.700
-- radius: radius.full
-- padding: spacing.inset.xs + spacing.inline.sm
-- typography: size.xs + weight.medium
-- usage: 分类标签、新功能提示、特殊属性标记。
+- radius: border-radius.scale.full
+- padding: spacing.semantic.inset.xs + spacing.semantic.inline.sm
 
-## NavBar (含 BrandArea)
-- background: primary.scale.500 (可用 primary.scale.500 到 primary.scale.700 的微渐变)
-- text/icon: [theme].text.inverse
-- radius: radius.xl
-- padding: spacing.inset.lg 到 spacing.inset.xl
-- typography: 标题 size.2xl/3xl (按空间选择), 副标题 size.base
-- usage: 页面顶部导航、品牌展示区、视觉锚点。
+### StatusMessage (Inline)
+- success: semantic.success.base
+- warning: semantic.warning.base
+- error: semantic.error.base
+- background (light): semantic.[status].light
+- radius: border-radius.scale.md
 
-## Toolbar / ButtonGroup
-- 同组按钮使用同一种组件等级。
-- 只有主操作可用 PrimaryButton；其余用 SecondaryButton 或 TertiaryButton。
-- 文本链组合默认使用 blueAxis 系列。
+---
 
-## Dialog
+## Layout & Structures
+
+### Dialog / Sheet
 - background: [theme].bg.elevated
-- radius: radius.xl
-- title: size.xl + weight.semibold + [theme].text.primary
-- body: size.base + [theme].text.secondary
-- actions: ButtonGroup 规则
+- radius (Dialog): border-radius.scale.xl
+- top radius (Sheet): border-radius.scale.2xl
+- shadow: shadow.[theme].2xl
 
-## Sheet
-- background: [theme].bg.elevated
-- top radius: radius.2xl
-- title: size.xl + weight.semibold + [theme].text.primary
-- body: size.base + [theme].text.secondary
-- actions: ButtonGroup 规则
+### List / Menu / Divider
+- divider color: [theme].border.default
+- item hover background: [theme].bg.surface
+- menu radius: border-radius.scale.lg
+- list spacing: spacing.semantic.stack.sm
 
-## EmptyState
+### EmptyState
 - icon: neutral.scale.400
-- title: size.lg + weight.semibold + [theme].text.primary
-- body: size.sm/base + [theme].text.secondary
+- title: typography.size.lg + typography.fontWeight.semibold + [theme].text.primary
+- body: typography.size.base + [theme].text.secondary
 - action: PrimaryButton
 
+---
+
 ## 禁止项
-- 禁止为同级操作按钮随机分配不同轴的颜色。
-- 禁止用 semantic 色系作为大卡片外边框。
-- 禁止脱离 radius scale 手写圆角值。
-- 禁止用大面积强渐变替代普通容器。
-- 禁止使用 "A 或 B" 的模糊决策，严格按照场景使用对应的 Color Axis。
+- **禁止使用简写路径**：必须包含文件名（如 `typography.`）和完整物理层级（如 `.scale.`）。
+- **禁止硬编码颜色**：必须通过 `[theme]` 引用语义色。
+- **禁止混用色轴**：同一组操作严禁混用 Primary 和 BlueAxis。
+- **禁止自创圆角**：必须从 `border-radius.scale` 中选择。
