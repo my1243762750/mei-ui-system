@@ -2,14 +2,12 @@
   "$schema": "version 1.0",
   "fontFamily": {
     "sans": {
-      "web": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-      "flutter": "GoogleFonts.inter",
-      "description": "Primary UI font"
+      "value": "system-sans",
+      "description": "Primary UI font. Map to the closest native/system sans font on each platform."
     },
     "mono": {
-      "web": "'JetBrains Mono', 'Fira Code', monospace",
-      "flutter": "GoogleFonts.jetBrainsMono",
-      "description": "Code and monospace"
+      "value": "system-mono",
+      "description": "Code and monospace font. Map to the closest native/system mono font on each platform."
     }
   },
   "size": {

@@ -11,6 +11,10 @@ AI 在所有平台上产出视觉一致的 UI，严格遵循 `mei-ui-system` 的
 - AI 自行发明主色、圆角值、阴影值、间距值
 - 修改 token 定义（改 token 要先问用户）
 - 跨平台同一组件出现不同视觉风格
+- 使用平台专属组件名、框架语法或业务场景作为设计规范
+- 为具体业务写死颜色含义（例如某动作固定用某色轴）
+- 用多个高饱和品牌色表达同级操作
+- 在规则层写固定尺寸；除 token 源文件外，尺寸必须引用 token 或使用比例/密度语义
 
 ### 2. 引用方式
 
@@ -44,13 +48,14 @@ AI 在所有平台上产出视觉一致的 UI，严格遵循 `mei-ui-system` 的
 - padding/margin 用同一 token key
 - 色值用同一 token key（即使各平台语法不同）
 - 圆角/阴影使用同一 token key，由平台适配层转换语法
+- 平台实现可封装本端组件，但组件语义和行为必须来自 `components.md`
 
 ### 5. Dark Mode
 
 - 所有组件必须同时支持 light/dark
 - 背景色用 `[theme].bg.*` token
 - 文字色用 `[theme].text.*` token
-- 阴影用 `shadow.[theme].*`（shadow.scale 对应 light，shadow.dark 对应 dark）
+- 阴影浅色模式用 `shadow.scale.*`，深色模式用 `shadow.dark.*`
 
 ### 6. 色调用法
 
@@ -63,6 +68,7 @@ AI 在所有平台上产出视觉一致的 UI，严格遵循 `mei-ui-system` 的
 语义色只表达状态，不承担品牌结构：
 
 - success/warning/error/info 可用于图标、状态文字、小徽标、轻量提示背景
+- 普通链接文字使用 `[theme].text.link`，信息提示使用 `color.semantic.info.*`
 - 大面积容器背景、卡片边框、页面结构边框默认使用 bg/border/primary token
 - 不要把 success/warning/error 作为大卡片外框，除非用户明确要求强告警样式
 
@@ -73,3 +79,4 @@ AI 在所有平台上产出视觉一致的 UI，严格遵循 `mei-ui-system` 的
 3. 再按 `components.md` 选择具体组件
 4. 从 `tokens/` 取精确值生成代码，不要硬编码
 5. 检查生成结果是否符合以上规则
+6. 若规则冲突，优先级为：可读性/可用性 > 视觉焦点 > 组件行为 > 装饰效果

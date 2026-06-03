@@ -1,16 +1,18 @@
 # Mei UI System
 
-Blue-Purple dual axis design system. Single source of truth for all platform UIs.
+Blue-Purple dual axis design system for cross-platform UI consistency.
+
+This README is for human orientation only. AI and other automated systems must use `ai.md` as the execution entry point.
 
 ## Entry Point for AI
 
-Read the following file for complete execution rules:
+Read the following file first for complete execution rules:
 
 ```
 ai.md
 ```
 
-Then read token files referenced in the rules.
+Then read `patterns.md`, `components.md`, and token files in the order defined by `ai.md`.
 
 ## Directory
 
