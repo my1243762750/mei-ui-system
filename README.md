@@ -7,7 +7,7 @@ Blue-Purple dual axis design system. Single source of truth for all platform UIs
 Read the following file for complete execution rules:
 
 ```
-skills/ui-style/SKILL.md
+ai.md
 ```
 
 Then read token files referenced in the rules.
@@ -16,7 +16,6 @@ Then read token files referenced in the rules.
 
 ```
 tokens/       → JSON design tokens (source of truth)
-themes/       → Platform-specific generated files
-components/   → Component specifications
-skills/       → AI execution rules
+components.md → Component composition rules
+ai.md         → AI execution rules
 ```
