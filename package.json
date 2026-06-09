@@ -1,0 +1,14 @@
+{
+  "name": "mei-ui-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mei UI Design Token System — Blue-Purple Dual Axis color system, typography, spacing, shadows, and motion tokens.",
+  "type": "module",
+  "exports": {
+    "./tokens/*": "./tokens/*"
+  },
+  "files": [
+    "tokens",
+    "README.md"
+  ]
+}
