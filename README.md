@@ -4,6 +4,8 @@ Mei UI System is a shared UI standard for AI-assisted projects.
 
 Its purpose is to make different AI agents and different projects produce the same visual style: blue-purple color system, consistent tokens, unified component rules, layout density, and Mei brand assets.
 
+![Mei UI System preview](assets/preview/mei-ui-preview.svg)
+
 ## AI Quick Start
 
 AI and other automated systems must use `ai.md` as the execution entry point.

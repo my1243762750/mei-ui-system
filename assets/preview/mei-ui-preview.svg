@@ -1,0 +1,104 @@
+<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mei UI System Preview</title>
+  <desc id="desc">High-fidelity preview of Mei UI System showing cross-product consistency driven by design tokens.</desc>
+  
+  <defs>
+    <!-- Brand Gradient from tokens (blueAxis.500 to purpleAxis.500) -->
+    <linearGradient id="brand-gradient" x1="0" y1="0" x2="368" y2="368" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3B82F6"/>
+      <stop offset="0.56" stop-color="#6C5CE7"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    
+    <!-- Shadow Token: subtle and modern -->
+    <filter id="card-shadow" x="0" y="0" width="1200" height="680" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#1A1A2E" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background: neutral.50 (#F8F9FC) -->
+  <rect width="1200" height="680" rx="24" fill="#F8F9FC"/>
+  
+  <!-- Main Container: radius.2xl (24px) -->
+  <rect x="72" y="56" width="1056" height="568" rx="24" fill="white" filter="url(#card-shadow)"/>
+  
+  <!-- HEADER -->
+  <g transform="translate(108, 82) scale(0.0924)">
+    <rect width="368" height="368" rx="84" fill="url(#brand-gradient)"/>
+    <g transform="translate(-72, -72)">
+      <path d="M144 326C170 266 199 218 230 218C261 218 270 258 282 294C294 258 307 218 342 218C381 218 407 266 410 326" stroke="white" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="256" cy="154" r="22" fill="white"/>
+      <circle cx="214" cy="174" r="14" fill="white"/>
+      <circle cx="298" cy="174" r="14" fill="white"/>
+    </g>
+  </g>
+  <text x="154" y="108" fill="#1A1A2E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="700">Mei UI System</text>
+  
+  <text x="880" y="106" fill="#5E5F6B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14">same tokens</text>
+  <rect x="970" y="82" width="110" height="38" rx="12" fill="#6C5CE7"/>
+  <text x="1002" y="106" fill="#FFFFFF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="600">v1.0 spec</text>
+
+  <rect x="72" y="128" width="1056" height="1" fill="#E4E5EF"/>
+
+  <!-- INTRO SECTION -->
+  <text x="108" y="184" fill="#1A1A2E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="800">Different products, same Mei style</text>
+  <text x="108" y="214" fill="#5E5F6B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">Multi-product screens sharing color, radius, and spacing tokens.</text>
+
+  <!-- MODULES: Communication -->
+  <rect x="108" y="252" width="304" height="272" rx="18" fill="#F8F9FC" stroke="#E4E5EF"/>
+  <text x="136" y="292" fill="#1A1A2E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">Communication</text>
+  
+  <rect x="136" y="320" width="120" height="36" rx="12" fill="white" stroke="#E4E5EF"/>
+  <text x="156" y="343" fill="#5E5F6B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">bg.page</text>
+  
+  <rect x="210" y="375" width="170" height="42" rx="12" fill="#6C5CE7"/>
+  <text x="236" y="401" fill="#FFFFFF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="600">primary bubble</text>
+  
+  <rect x="136" y="445" width="230" height="44" rx="12" fill="white" stroke="#E4E5EF"/>
+  <text x="156" y="472" fill="#A1A3B0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">spacing.xl (16px)</text>
+
+  <!-- MODULES: Workspace -->
+  <rect x="448" y="252" width="304" height="272" rx="18" fill="white" stroke="#E4E5EF"/>
+  <text x="476" y="292" fill="#1A1A2E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">Workspace</text>
+  
+  <rect x="476" y="320" width="248" height="64" rx="12" fill="#F8F9FC"/>
+  <text x="496" y="344" fill="#5E5F6B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">Active Users</text>
+  <text x="496" y="370" fill="#1A1A2E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="800">24,680</text>
+  
+  <rect x="476" y="415" width="200" height="10" rx="5" fill="#E4E5EF"/>
+  <rect x="476" y="415" width="140" height="10" rx="5" fill="#3B82F6"/>
+  <text x="686" y="424" fill="#A1A3B0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="11">blueAxis</text>
+
+  <rect x="476" y="445" width="100" height="26" rx="13" fill="#F5F3FF"/>
+  <text x="502" y="462" fill="#6D28D9" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600">badge</text>
+
+  <!-- MODULES: Settings -->
+  <rect x="788" y="252" width="304" height="272" rx="18" fill="white" stroke="#E4E5EF"/>
+  <text x="816" y="292" fill="#1A1A2E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">Settings</text>
+  
+  <text x="816" y="328" fill="#5E5F6B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">Label</text>
+  <rect x="816" y="342" width="248" height="42" rx="12" fill="#F8F9FC" stroke="#E4E5EF"/>
+  <text x="836" y="368" fill="#A1A3B0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">input.surface</text>
+  
+  <rect x="816" y="415" width="110" height="40" rx="12" fill="#6C5CE7"/>
+  <text x="850" y="440" fill="#FFFFFF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="600">Save</text>
+  <rect x="938" y="415" width="98" height="40" rx="12" fill="white" stroke="#E4E5EF"/>
+  <text x="962" y="440" fill="#6C5CE7" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="600">Cancel</text>
+
+  <!-- FOOTER TOKEN BAR -->
+  <rect x="108" y="558" width="984" height="34" rx="17" fill="#F8F9FC"/>
+  <circle cx="136" cy="575" r="8" fill="#6C5CE7"/>
+  <text x="154" y="580" fill="#5E5F6B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">primary.base</text>
+  
+  <rect x="280" y="567" width="16" height="16" rx="4" stroke="#E4E5EF" stroke-width="2"/>
+  <text x="304" y="580" fill="#5E5F6B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">border.default</text>
+  
+  <rect x="430" y="567" width="16" height="16" rx="4" fill="#1A1A2E"/>
+  <text x="454" y="580" fill="#5E5F6B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">radius.lg (12px)</text>
+  
+  <circle cx="610" cy="575" r="8" fill="#3B82F6"/>
+  <text x="628" y="580" fill="#5E5F6B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">blueAxis.base</text>
+  
+  <text x="770" y="580" fill="#1A1A2E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="700">Typography</text>
+  <text x="850" y="580" fill="#5E5F6B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">system-sans</text>
+</svg>
