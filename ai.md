@@ -80,7 +80,8 @@ AI 在所有平台上产出视觉一致的 UI，严格遵循 `mei-ui-system` 的
 - 禁止重绘、换色、拉伸或改变 Mei logo 结构。
 - 默认 logo 只使用图形，不包含 `mei`、`mei yang`、`梅洋` 等文字。
 - logo 必须保持几何精密感：曲线使用矢量路径，圆点使用标准圆形，左右结构保持视觉对称，不使用手绘、抖动、粗细随意变化的线条。
-- logo 资产按场景选择：favicon/app icon 用 `assets/logo/mei-mark.svg`，导航/登录页用 `assets/logo/mei-wordmark.svg`，独立展示/品牌页用 `assets/logo/mei-lockup.svg`。
+- logo 资产按场景选择：favicon/app icon 用 `assets/logo/mei-mark.svg` 或 `assets/logo/favicon.svg`，导航/登录页用 `assets/logo/mei-wordmark.svg`，独立展示/品牌页用 `assets/logo/mei-lockup.svg`。
+- README、应用商店、三方平台上传等位图场景直接使用 `assets/logo/mei-mark.png` 或 `assets/logo/mei-mark@2x.png`，不要在接入项目里重新导出。
 
 ### 8. 工作流
 

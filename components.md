@@ -100,6 +100,8 @@
 ### BrandLogo
 - 默认使用 `brand.md` 中的 Mei 统一 logo 资产，不为单个项目重新设计。
 - Mark: `assets/logo/mei-mark.svg`，用于 favicon、app icon、窄侧边栏、头像式品牌入口。
+- PNG Mark: `assets/logo/mei-mark.png` / `assets/logo/mei-mark@2x.png`，用于 README、三方平台上传和需要位图的图标场景。
+- Favicon: `assets/logo/favicon.svg` / `assets/logo/favicon.png`，用于浏览器标签页图标。
 - Wordmark: `assets/logo/mei-wordmark.svg`，用于系统左上角、顶部导航、登录页、空状态、关于页，仍只包含图形。
 - Lockup: `assets/logo/mei-lockup.svg`，用于独立展示、品牌页、文档封面、启动页，仍只包含图形。
 - 背景优先使用 [theme].bg.page / [theme].bg.elevated；深色或复杂背景上必须保证清晰对比。
