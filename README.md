@@ -1,26 +1,33 @@
 # Mei UI System
 
-Blue-Purple dual axis design system for cross-platform UI consistency.
+Mei UI System is a shared UI standard for AI-assisted projects.
 
-This README is for human orientation only. AI and other automated systems must use `ai.md` as the execution entry point.
+Its purpose is to make different AI agents and different projects produce the same visual style: blue-purple color system, consistent tokens, unified component rules, layout density, and Mei brand assets.
 
-## Entry Point for AI
+## AI Quick Start
 
-Read the following file first for complete execution rules:
+AI and other automated systems must use `ai.md` as the execution entry point.
 
-```
-ai.md
-```
+1. Read `ai.md`.
+2. Read token files in the order defined by `ai.md`.
+3. Read `patterns.md` to decide product type, density, and layout.
+4. Read `components.md` to choose component composition rules.
+5. Read `brand.md` before using or creating any logo / app icon / favicon.
+6. Generate UI using token paths only; do not hardcode colors, spacing, radius, shadows, or typography.
 
-Then read `patterns.md`, `components.md`, and token files in the order defined by `ai.md`.
+## Brand Rule
+
+If the target project has no existing logo / app icon / brand mark, use the Mei default logo assets in `assets/logo/`.
+
+Do not redesign, recolor, stretch, or replace the Mei logo for each project.
 
 ## Directory
 
 ```
 tokens/       → JSON design tokens (source of truth)
 assets/logo/  → Unified Mei logo assets (SVG source + PNG/favicon exports)
-components.md → Component composition rules
-patterns.md   → Layout patterns by product type
-brand.md      → Logo and brand usage rules
 ai.md         → AI execution rules
+patterns.md   → Layout patterns by product type
+components.md → Component composition rules
+brand.md      → Logo and brand usage rules
 ```
