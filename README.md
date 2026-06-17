@@ -18,7 +18,9 @@ Then read `patterns.md`, `components.md`, and token files in the order defined b
 
 ```
 tokens/       → JSON design tokens (source of truth)
+assets/logo/  → Unified Mei logo assets
 components.md → Component composition rules
 patterns.md   → Layout patterns by product type
+brand.md      → Logo and brand usage rules
 ai.md         → AI execution rules
 ```

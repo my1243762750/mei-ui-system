@@ -72,7 +72,17 @@ AI 在所有平台上产出视觉一致的 UI，严格遵循 `mei-ui-system` 的
 - 大面积容器背景、卡片边框、页面结构边框默认使用 bg/border/primary token
 - 不要把 success/warning/error 作为大卡片外框，除非用户明确要求强告警样式
 
-### 7. 工作流
+### 7. Logo / Brand
+
+- Mei 是统一母品牌；没有项目 logo / app icon / brand mark 时，必须使用 `brand.md` 定义的 Mei 默认 logo。
+- 有项目 logo 时，保留项目 logo，只接入 Mei UI 风格。
+- 禁止 AI 为不同系统临时生成不同 Mei logo。
+- 禁止重绘、换色、拉伸或改变 Mei logo 结构。
+- 默认 logo 只使用图形，不包含 `mei`、`mei yang`、`梅洋` 等文字。
+- logo 必须保持几何精密感：曲线使用矢量路径，圆点使用标准圆形，左右结构保持视觉对称，不使用手绘、抖动、粗细随意变化的线条。
+- logo 资产按场景选择：favicon/app icon 用 `assets/logo/mei-mark.svg`，导航/登录页用 `assets/logo/mei-wordmark.svg`，独立展示/品牌页用 `assets/logo/mei-lockup.svg`。
+
+### 8. 工作流
 
 1. 按第 3 条顺序读取文件和规则
 2. 先按 `patterns.md` 确定产品类型、密度和布局

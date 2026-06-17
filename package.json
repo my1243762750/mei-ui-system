@@ -5,10 +5,20 @@
   "description": "Mei UI Design Token System — Blue-Purple Dual Axis color system, typography, spacing, shadows, and motion tokens.",
   "type": "module",
   "exports": {
-    "./tokens/*": "./tokens/*"
+    "./tokens/*": "./tokens/*",
+    "./assets/logo/*": "./assets/logo/*",
+    "./ai.md": "./ai.md",
+    "./brand.md": "./brand.md",
+    "./patterns.md": "./patterns.md",
+    "./components.md": "./components.md"
   },
   "files": [
     "tokens",
-    "README.md"
+    "assets",
+    "README.md",
+    "ai.md",
+    "brand.md",
+    "patterns.md",
+    "components.md"
   ]
 }

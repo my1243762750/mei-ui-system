@@ -81,8 +81,8 @@
 
 | 属性 | 规则 |
 |---|---|
-| 顶部栏 | 品牌型：background: color.primary.scale.500 + [theme].text.inverse；工作台型：background: [theme].bg.page + color.primary.scale.500。高度使用 spacing.scale.12 ~ spacing.scale.14，标题 typography.size.base |
-| 会话列表 | 双栏/三栏时存在，作为辅助列窄于主内容区，背景 [theme].bg.page，列表项高度使用 spacing.scale.16 ~ spacing.scale.20 |
+| 顶部栏 | 品牌型：background: color.primary.scale.500 + [theme].text.inverse；工作台型：background: [theme].bg.page + color.primary.scale.500。高度使用 Communication 顶部栏密度语义，标题 typography.size.base |
+| 会话列表 | 双栏/三栏时存在，作为辅助列窄于主内容区，背景 [theme].bg.page，列表项高度使用 Communication 列表项密度语义 |
 | 消息区背景 | [theme].bg.surface |
 | 气泡（自己） | color.primary.scale.500 + [theme].text.inverse |
 | 气泡（对方） | [theme].bg.elevated + [theme].text.primary |
