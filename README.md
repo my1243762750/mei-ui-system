@@ -1,35 +1,35 @@
-# Mei UI System
+# Mei UI 系统 (Mei UI System)
 
-Mei UI System is a shared UI standard for AI-assisted projects.
+Mei UI 系统是一个面向 AI 辅助项目的共享 UI 标准。
 
-Its purpose is to make different AI agents and different projects produce the same visual style: blue-purple color system, consistent tokens, unified component rules, layout density, and Mei brand assets.
+其目的是使不同的 AI 代理和不同的项目能够产生一致的视觉风格：蓝紫色彩体系、一致的 Token、统一的组件规则、布局密度以及 Mei 品牌资产。
 
-![Mei UI System preview](assets/preview/mei-ui-preview.svg)
+![Mei UI 系统预览](assets/preview/mei-ui-preview.svg)
 
-## AI Quick Start
+## AI 快速入门
 
-AI and other automated systems must use `ai.md` as the execution entry point.
+AI 和其他自动化系统必须将 `ai.md` 作为执行入口点。
 
-1. Read `ai.md`.
-2. Read token files in the order defined by `ai.md`.
-3. Read `patterns.md` to decide product type, density, and layout.
-4. Read `components.md` to choose component composition rules.
-5. Read `brand.md` before using or creating any logo / app icon / favicon.
-6. Generate UI using token paths only; do not hardcode colors, spacing, radius, shadows, or typography.
+1. 阅读 `ai.md`。
+2. 按照 `ai.md` 定义的顺序阅读 Token 文件。
+3. 阅读 `patterns.md` 以决定产品类型、密度和布局。
+4. 阅读 `components.md` 以选择组件组合规则。
+5. 在使用或创建任何 logo / 应用图标 / favicon 之前，阅读 `brand.md`。
+6. 仅使用 Token 路径生成 UI；**严禁**硬编码颜色、间距、圆角、阴影或字体排版。
 
-## Brand Rule
+## 品牌规则
 
-If the target project has no existing logo / app icon / brand mark, use the Mei default logo assets in `assets/logo/`.
+如果目标项目没有现有的 logo / 应用图标 / 品牌标识，必须使用 `assets/logo/` 中的 Mei 默认 logo 资产。
 
-Do not redesign, recolor, stretch, or replace the Mei logo for each project.
+禁止为每个项目重新设计、换色、拉伸或替换 Mei logo。
 
-## Directory
+## 目录结构
 
 ```
-tokens/       → JSON design tokens (source of truth)
-assets/logo/  → Unified Mei logo assets (SVG source + PNG/favicon exports)
-ai.md         → AI execution rules
-patterns.md   → Layout patterns by product type
-components.md → Component composition rules
-brand.md      → Logo and brand usage rules
+tokens/       → JSON 设计变量 / Design Tokens (事实来源)
+assets/logo/  → 统一的 Mei Logo 资产 (SVG 源码 + PNG/favicon 导出文件)
+ai.md         → AI 执行规则与指令
+patterns.md   → 按产品类型划分的布局模式
+components.md → 组件组合规则
+brand.md      → Logo 及品牌使用规则
 ```
