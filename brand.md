@@ -1,6 +1,6 @@
 # Mei Brand Rules
 
-Mei 是统一母品牌。除非目标项目已有明确 logo / app icon / brand mark，否则所有接入 `mei-ui-system` 的项目都必须使用 Mei 默认标识，不允许 AI 为每个项目临时重新设计 logo。
+Mei 是统一母品牌体系。接入 `mei-ui-system` 的项目应该看起来属于同一套平台，但不要求所有项目使用同一个 logo。
 
 ## Logo Assets
 
@@ -16,12 +16,14 @@ Mei 是统一母品牌。除非目标项目已有明确 logo / app icon / brand 
 
 ## AI Rules
 
-- 没有项目 logo 时，必须使用 Mei 默认 logo。
 - 有项目 logo 时，保留项目 logo，只接入 Mei UI 风格。
-- 禁止为不同系统生成不同 Mei logo。
-- 禁止拉伸、重绘、换色或改变 Mei logo 结构。
-- 默认 logo 只使用图形，不包含 `mei`、`mei yang`、`梅洋` 等文字。
-- logo 必须保持几何精密感：曲线使用矢量路径，圆点使用标准圆形，左右结构保持视觉对称，不使用手绘、抖动、粗细随意变化的线条。
-- 小于等于图标场景使用 `mei-mark.svg`；导航和产品头部优先使用 `mei-wordmark.svg`；独立展示使用 `mei-lockup.svg`。
+- 没有项目 logo 时，生成一个 Mei 风格子项目 logo，不直接复用 Mei 主 logo。
+- Mei 主 logo 只用于 Mei UI System、本体系文档、母品牌入口和明确属于 Mei 母品牌的页面。
+- 子项目 logo 必须保持 Mei 体系：蓝紫色轴、几何造型、统一圆角、安全留白、清晰小尺寸识别。
+- 子项目 logo 可根据项目名称、首字母、功能对象或抽象符号设计。
+- 是否使用 `mei`、`M`、中文或完整文字，由项目识别需求、尺寸场景和可读性决定；默认不强制携带。
+- 小尺寸图标优先使用简洁图形；文字只在清晰、不拥挤且有识别价值时使用。
 - 前端页面优先使用 SVG；README、应用商店、三方平台上传等位图场景使用 PNG 导出物。
+- 禁止脱离 Mei 体系随机生成风格完全不同的 logo。
+- 禁止拉伸、裁切、模糊化或随意改色已确定的 Mei 主 logo / 子项目 logo。
 - logo 周围至少保留一个图标主体宽度的视觉留白，不能贴边或塞进复杂背景。

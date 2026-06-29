@@ -98,14 +98,14 @@
 ## Navigation & Feedback
 
 ### BrandLogo
-- 默认使用 `brand.md` 中的 Mei 统一 logo 资产，不为单个项目重新设计。
-- Mark: `assets/logo/mei-mark.svg`，用于 favicon、app icon、窄侧边栏、头像式品牌入口。
-- PNG Mark: `assets/logo/mei-mark.png` / `assets/logo/mei-mark@2x.png`，用于 README、三方平台上传和需要位图的图标场景。
-- Favicon: `assets/logo/favicon.svg` / `assets/logo/favicon.png`，用于浏览器标签页图标。
-- Wordmark: `assets/logo/mei-wordmark.svg`，用于系统左上角、顶部导航、登录页、空状态、关于页，仍只包含图形。
-- Lockup: `assets/logo/mei-lockup.svg`，用于独立展示、品牌页、文档封面、启动页，仍只包含图形。
+- 品牌入口遵循 `brand.md`：统一 Mei 风格体系，不要求所有项目共用同一个 logo。
+- Mei 主 logo 资产只用于 Mei UI System、本体系文档、母品牌入口和明确属于 Mei 母品牌的页面。
+- 子项目已有 logo 时保留；没有 logo 时生成 Mei 风格子项目 logo。
+- 子项目 logo 应使用蓝紫色轴、几何造型、统一圆角、安全留白，并保证 favicon / app icon 等小尺寸下可识别。
+- 子项目 logo 可使用项目名称、首字母、功能对象或抽象符号；是否使用 `mei`、`M`、中文或完整文字，由识别需求和尺寸场景决定。
 - 背景优先使用 [theme].bg.page / [theme].bg.elevated；深色或复杂背景上必须保证清晰对比。
-- 禁止拉伸、裁切、换色、加阴影或放入高饱和装饰容器。
+- 禁止脱离 Mei 体系随机生成风格完全不同的 logo。
+- 禁止拉伸、裁切、模糊化或随意改色已确定的 Mei 主 logo / 子项目 logo。
 
 ### NavBar
 - background: color.primary.scale.500

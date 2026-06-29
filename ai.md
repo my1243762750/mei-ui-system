@@ -74,14 +74,15 @@ AI 在所有平台上产出视觉一致的 UI，严格遵循 `mei-ui-system` 的
 
 ### 7. Logo / Brand
 
-- Mei 是统一母品牌；没有项目 logo / app icon / brand mark 时，必须使用 `brand.md` 定义的 Mei 默认 logo。
+- Mei 是统一母品牌体系；统一的是视觉语言，不是所有项目共用同一个 logo。
 - 有项目 logo 时，保留项目 logo，只接入 Mei UI 风格。
-- 禁止 AI 为不同系统临时生成不同 Mei logo。
-- 禁止重绘、换色、拉伸或改变 Mei logo 结构。
-- 默认 logo 只使用图形，不包含 `mei`、`mei yang`、`梅洋` 等文字。
-- logo 必须保持几何精密感：曲线使用矢量路径，圆点使用标准圆形，左右结构保持视觉对称，不使用手绘、抖动、粗细随意变化的线条。
-- logo 资产按场景选择：favicon/app icon 用 `assets/logo/mei-mark.svg` 或 `assets/logo/favicon.svg`，导航/登录页用 `assets/logo/mei-wordmark.svg`，独立展示/品牌页用 `assets/logo/mei-lockup.svg`。
-- README、应用商店、三方平台上传等位图场景直接使用 `assets/logo/mei-mark.png` 或 `assets/logo/mei-mark@2x.png`，不要在接入项目里重新导出。
+- 没有项目 logo / app icon / brand mark 时，AI 必须按 `brand.md` 生成一个 Mei 风格的子项目 logo，而不是直接复用 Mei 主 logo。
+- Mei 主 logo 只用于 Mei UI System、本体系文档、母品牌入口和明确属于 Mei 母品牌的页面。
+- 子项目 logo 必须保持 Mei 体系：蓝紫色轴、几何造型、统一圆角、安全留白、清晰小尺寸识别。
+- 子项目 logo 可根据项目名称、首字母、功能对象或抽象符号设计；是否使用 `mei`、`M`、中文或完整文字，由识别需求、尺寸场景和可读性决定。
+- 小尺寸图标优先使用简洁图形；文字只在清晰、不拥挤且有识别价值时使用。
+- 禁止脱离 Mei 体系随机生成风格完全不同的 logo。
+- 禁止拉伸、裁切、模糊化或随意改色已确定的 Mei 主 logo / 子项目 logo。
 
 ### 8. 工作流
 
